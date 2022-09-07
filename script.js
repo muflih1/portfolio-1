@@ -19,6 +19,13 @@ $(document).ready(() => {
 
 	$('.menu-btn').on('click', () => {
 		$('.navbar .nav').toggleClass('active')
+		if ($('.navbar .nav').hasClass('active')) {
+			setTimeout(() => {
+				$('.menu-btn span').text('close')
+			}, 200)
+		} else {
+			$('.menu-btn span').text('menu')
+		}
 	})
 
 	$('.carousel').owlCarousel({
